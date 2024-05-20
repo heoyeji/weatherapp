@@ -1,4 +1,5 @@
-const api_key = "3b65f9d35ac8d71d03070db7f1cc51de";
+const api_key = config.apikey;
+
 let temp = document.querySelector("#temp"),
   place = document.querySelector("#place"),
   wind = document.querySelector("#wind"),
@@ -60,7 +61,7 @@ const updateWeather = (data) => {
 document.querySelector("#cur").addEventListener("click", () => App());
 document
   .querySelector("#gim")
-  .addEventListener("click", () => getWeatherByCityName("Gimpo-si")); // 또는 "김포"
+  .addEventListener("click", () => getWeatherByCityName("Gimpo-si"));
 document
   .querySelector("#seoul")
   .addEventListener("click", () => getWeatherByCityName("Seoul"));
