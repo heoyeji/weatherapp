@@ -1,0 +1,45 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  /* background-image: url(img/86a49f6e0a9c76d2fcdb5e90ea12b6b2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: rgb(188, 235, 250);
+  background-image: url(img/1352473657393e22764e034f236738d8.jpg);
+  font-family: "Orbit", sans-serif;
+}
+.container {
+  background-image: url(img/9fdc4c1303dfedf09653e457b20060fa.jpg);
+  background-repeat: no-repeat;
+  background-size: 60vh;
+  height: 100vh;
+  /* text-align: center; */
+  background-position: center;
+  text-align: center;
+  padding-top: 300px;
+  box-sizing: border-box;
+  line-height: 40px;
+}
+#cur {
+  background-color: yellow;
+
+  border: 3px solid rgb(255, 215, 97);
+
+  color: #333;
+}
+#gim {
+  background-color: rgb(205, 241, 253);
+  border: 3px solid #ccc;
+}
+#seoul {
+  background-color: rgb(194, 250, 120);
+  border: 3px solid olivedrab;
+}
+button {
+  font-family: "Ubuntu", sans-serif;
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+}
