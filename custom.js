@@ -8,11 +8,29 @@ let temp = document.querySelector("#temp"),
 
 // 현재 위치의 날씨를 가져오는 함수
 function App() {
-  navigator.geolocation.getCurrentPosition((position) => {
-    let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
-    getWeatherByCoords(lat, lon);
-  });
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      console.log("현재 위치 좌표:", lat, lon);
+      getWeatherByCoords(lat, lon);
+    },
+    (error) => {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          console.error("사용자가 위치 공유를 거부했습니다.");
+          break;
+        case error.POSITION_UNAVAILABLE:
+          console.error("장치에서 위치 정보를 사용할 수 없습니다.");
+          break;
+        case error.TIMEOUT:
+          console.error("위치 정보를 가져오는 데 시간이 초과되었습니다.");
+          break;
+        default:
+          console.error("현재 위치 가져오기 실패:", error.message);
+      }
+    }
+  );
 }
 
 const getWeatherByCoords = async (lat, lon) => {
