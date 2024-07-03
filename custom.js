@@ -83,6 +83,15 @@ document
 document
   .querySelector("#seoul")
   .addEventListener("click", () => getWeatherByCityName("Seoul"));
+document
+  .querySelector("#busan")
+  .addEventListener("click", () => getWeatherByCityName("Busan"));
+document
+  .querySelector("#chuncheon")
+  .addEventListener("click", () => getWeatherByCityName("ChunCheon"));
+document
+  .querySelector("#jeju")
+  .addEventListener("click", () => getWeatherByCityName("Jeju"));
 
 // 초기 호출
 App();
